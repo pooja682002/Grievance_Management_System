@@ -28,11 +28,3 @@ The Grievance Management System (GMS) is a web application designed to streamlin
 - **Database**: PostgreSQL
 - **Version Control**: Git and GitHub
 
-## Installation
-To install and run the Grievance Management System locally, follow these steps:
-
-### Backend Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/pooja682002/Grievance_Management_System.git
-   cd Grievance_Management_System
