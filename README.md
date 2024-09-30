@@ -19,7 +19,6 @@ The Grievance Management System (GMS) is a web application designed to streamlin
   - Supervisors can view all grievances and monitor their status.
 - **Grievance Submission**: Users can easily submit grievances regarding products, services, or any other concerns.
 - **Real-time Status Updates**: Users receive real-time updates on their grievance status.
-- **Search and Filter Options**: Users can search and filter grievances based on various criteria.
 - **User Authentication**: Secure login functionality to protect user data.
   
 ## Technologies Used
