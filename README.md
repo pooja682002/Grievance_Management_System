@@ -4,10 +4,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 The Grievance Management System (GMS) is a web application designed to streamline the process of handling customer grievances in an online shopping environment. The system allows users to submit grievances related to their shopping experience, enabling efficient resolution by the support team.
