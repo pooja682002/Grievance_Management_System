@@ -124,3 +124,4 @@ const GrievanceList = ({ loggedInUser }) => {
 };
 
 export default GrievanceList;
+
