@@ -1,72 +1,4 @@
-/*package com.example.grievance_management.controller;
-
-import com.example.grievance_management.entity.Grievance;
-import com.example.grievance_management.entity.User; // Ensure User entity is imported
-import com.example.grievance_management.Service.GrievanceService;
-import com.example.grievance_management.Service.UserService; // Import UserService if needed
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
-@RestController
-@RequestMapping("/api/grievances")
-public class GrievanceController {
-
-    @Autowired
-    private GrievanceService grievanceService;
-
-    @Autowired
-    private UserService userService; // You may need this to fetch the user
-
-    @PostMapping
-    public ResponseEntity<?> createGrievance(@RequestBody Grievance grievance) {
-        try {
-            // Ensure that the user is associated with the grievance
-            User user = userService.getUserById(grievance.getUser().getId()); // Fetch user using UserService
-            if (user == null) {
-                return ResponseEntity.badRequest().body("User not found");
-            }
-            grievance.setUser(user); // Associate the grievance with the user
-
-            Grievance createdGrievance = grievanceService.createGrievance(grievance);
-            return ResponseEntity.ok(createdGrievance);
-        } catch (Exception e) {
-            // Log the error for debugging
-            System.err.println("Error creating grievance: " + e.getMessage());
-            return ResponseEntity.status(500).body("Error creating grievance");
-        }
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Grievance> getGrievanceById(@PathVariable Long id) {
-        Grievance grievance = grievanceService.getGrievanceById(id);
-        return grievance != null ? ResponseEntity.ok(grievance) : ResponseEntity.notFound().build();
-    }
-
-    @GetMapping
-    public ResponseEntity<List<Grievance>> getAllGrievances() {
-        List<Grievance> grievances = grievanceService.getAllGrievances();
-        return ResponseEntity.ok(grievances);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Grievance> updateGrievance(@PathVariable Long id, @RequestBody Grievance grievance) {
-        Grievance updatedGrievance = grievanceService.updateGrievance(id, grievance);
-        return updatedGrievance != null ? ResponseEntity.ok(updatedGrievance) : ResponseEntity.notFound().build();
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteGrievance(@PathVariable Long id) {
-        grievanceService.deleteGrievance(id);
-        return ResponseEntity.noContent().build();
-    }
-}
-
-*/
-
-        package com.example.grievance_management.controller;
+package com.example.grievance_management.controller;
 
 import com.example.grievance_management.entity.Grievance;
 import com.example.grievance_management.entity.User;
@@ -77,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-        import java.util.List;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/grievances")
