@@ -10,10 +10,12 @@ public class Grievance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+   
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER) // Changed to EAGER
     @JoinColumn(name = "user_id")
     private User user;
+
 
     @Column(nullable = false)
     private String category;
@@ -36,7 +38,16 @@ public class Grievance {
         createdAt = LocalDateTime.now();
     }
 
-    // Getters and setters
+    // Getter for username from the related user
+    @Transient
+    private String username;
+
+    // This getter retrieves the username of the associated User entity
+    public String getUsername() {
+        return user != null ? user.getUsername() : null; // Returns username if user is not null
+    }
+
+    // Getters and setters for other fields
     public Long getId() {
         return id;
     }
@@ -93,3 +104,5 @@ public class Grievance {
         this.assignedTo = assignedTo;
     }
 }
+
+
