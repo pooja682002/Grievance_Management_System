@@ -68,7 +68,7 @@ const GrievanceList = ({ loggedInUser }) => {
 
                 {/* Show username and userID */} 
                 <Grid item xs={3}>
-                  <Typography><strong>User Name:</strong> {grievance.user ? grievance.user.name : 'N/A'}</Typography>
+                  <Typography><strong>User Name:</strong> {grievance.user ? grievance.user.username : 'N/A'}</Typography>
                   <Typography><strong>User ID:</strong> {grievance.user ? grievance.user.id : 'N/A'}</Typography>
                 </Grid>
 
