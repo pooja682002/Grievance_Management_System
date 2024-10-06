@@ -46,9 +46,11 @@ public class GrievanceController {
     }
 
     // Get all grievances
-    @GetMapping
+   @GetMapping
     public ResponseEntity<List<Grievance>> getAllGrievances() {
         List<Grievance> grievances = grievanceService.getAllGrievances();
+
+        // No need to set the username manually; it's derived from the user object
         return ResponseEntity.ok(grievances);
     }
 
